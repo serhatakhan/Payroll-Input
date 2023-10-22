@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(/ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* arka plan sabit kalsın */
+    height: 100%;
+}
+
+/* navbar css start*/
+.navbar{
+    background-color: rgba(0, 255, 255, 0.681);
+    height: 100px;
+    display: flex;
+    /* h1 ve a etiketlerimizi yan yana getirdik display flex ile*/
+    align-items: center;
+    /* dikeyde hizalamış olduk, dikeyde ortaladık yani align-items center ile */
+    justify-content: space-around;
+    /* justify content space around ile elemanların arasındaki boşluğu eşit olacak şekilde dikeyde hizalıyoruz. */
+    /* justify content center deseydik, yatayda ortalamış olacaktık */
+    width: 100%;
+    position: fixed;
+    /* width ile genişlik vermeseydik position fixed istediğmiz gibi yer kaplamayacaktı */
+    top: 0;
+    /* position'ın verdiği bir özellik. yukarıdan ne kadar boşluk kalacağını ayarlıyoruz. */
+}
+
+.navbar .big-title h1{
+    color: rgb(195, 130, 8);
+}
+
+.navbar .big-title h1 span{
+    color: black;
+}
+
+.navbar .navigation ul li{
+    list-style-type: none;
+    /* tablonun noktasını sildik */
+}
+
+.navbar .navigation ul li a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: rgb(0, 117, 12);
+    font-size: 23px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar .navigation ul li a:hover{
+    color: black;
+    cursor: pointer;
+    /* üstüne geldiğinde el işareti çıkıyor cursor pointer ile */
+}
+/* navbar css end */
+
+/* main content start */
+.main{
+    height: 50vh;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    /* neden buraya da display flex ve justify content verdik?
+    çünkü dışarda da tüm bunları kapsayan bir kapsayıcı var, bu kapsayıcının da 
+    ortalanması lazım */
+}
+
+.main .info{
+    height: 100%;
+    max-width: 800px;
+    display: flex;
+    /* sadece yan yana getirmek için değil tek bir kapsayıcısı olan elemanı da hizalamak
+    için kullanabiliriz. */
+    justify-content: center;
+    /* içeriği merkeze hizaladık */
+    flex-direction: column;
+    /* elemanları alt alta getirdik */
+    align-items: center;
+    /* dikeyde aynı hizaya getirdik */
+    text-align: center;
+    /* metinleri ortaladık */
+    gap: 20px;
+    /* başlık, metin ve buton arasına mesafe koyduk gap ile */
+    /* NOT: justify content, align items, flex directions, gap 
+    BUNLARI YAZMADAN ÖNCE "dısplay flex" yazmak gerek. YOKSA ÇALIŞMAZLAR */
+}
+
+.main .info h1{
+    color: rgb(200, 94, 18);
+}
+
+.main .info p{
+    color: gray;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.main .info p b{
+    color: brown;
+    text-transform: capitalize;
+    /* ilk harfleri büyük yaptık */
+}
+
+.main .info button{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .info button:hover{
+    background-color: rgba(255, 0, 0, 0.7);
+}
+/* main content end */
+
+/* table css start */
+.table-container{
+    width: 75%;
+    margin: 20px auto;
+}
+
+.table-container table{
+    width: 100%;
+    /* yani dedik ki, %70'lik bölümün
+    100%'ünü kapla. */
+    text-align: center;
+    margin-top: 100px;
+    border-collapse: collapse;
+    /* tablonun arasındaki boşlukları kaldırıyor */
+}
+
+th, td{
+    padding: 8px;
+    border: 1px solid grey;
+}
+/* eğer arasına virgül koymazsak th'nin içindeki td anlamına gelecekti.
+virgül kullanarak bu ikisine şu özellikler verilsin diyoruz. */
+
+th{
+    background-color: rgb(215, 194, 194);
+}
+
+td{
+    color: white;
+}
+
+td:hover{
+    background-color: rgba(233, 233, 233, 0.534);
+}
+/* table css end */
+
+/* form area css start */
+.form-container{
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 100px;
+    background-color: white;
+}
+
+label{
+    font-weight: bold;
+}
+
+#ad, #e-posta, #mesaj{
+    width: 98%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.buton{
+    background-color: rgb(17, 46, 140);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buton:hover{
+    background-color: rgba(25, 49, 204, 0.475);
+}
+/* form area css end */
+
+/* footer area start */
+.foot{
+    background-color: rgb(48, 45, 45);
+    color: white;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    /* flex, esnetmek demek. display flex gelen elemanlara esneklik sağlar. yatayda ve
+    dikeyde hizalama işlemi yapmamı sağlar */
+    align-items: center;
+    justify-content: center;
+}
+/* footer area end */
+
+/* Media Sorgusu */
+@media (max-width: 800px){
+    .navbar .navigation{
+        display: none; 
+    }
+    .navbar{
+        background-color: bisque
+    }
+}
+/* burada şunu yaptık:
+genişlik azaldığında navbardaki gezinme seçenekleri bozuluyordu ya.
+max genişlik 800 pikselin altına indiğinde o gezinme seçenekleri görünmesin dedik. */

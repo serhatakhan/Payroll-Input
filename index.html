@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar start -->
+    <div class="navbar">
+        <div class="big-title">
+            <h1>UDE<span>MIG</span></h1>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Contact</a>
+                    <a href="">Services</a>
+<!-- burada ul ve li' ye girmek yerine sadece a etiketi kullansak da olurdu. -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar end -->
+    
+    <!-- main content start -->
+    <div class="main">
+        <div class="info">
+            <h1>Keşfetmeye Hazır Mısın ?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ea rem dolorem eum, 
+            <b>corporis labore dolorum amet ex eos soluta ipsum ipsa harum nemo blanditiis fugit</b> veritatis nostrum doloribus iure.</p>
+            <button>Daha Fazlası İçin Tıklayın</button>
+        </div>
+    </div>
+    <!-- main content end -->
+
+    <!-- table area start -->
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Ay</th>
+                <th>Çalışma Günü</th>
+                <th>Maaş</th>
+            </tr>
+            <tr>
+                <td>Ocak</td>
+                <td>20</td>
+                <td>5.000 $</td>
+            </tr>
+            <tr>
+                <td>Şubat</td>
+                <td>20</td>
+                <td>5.000 $</td>
+            </tr>
+            <tr>
+                <td>Mart</td>
+                <td>20</td>
+                <td>5.000 $</td>
+            </tr>
+            <tr>
+                <td>Nisan</td>
+                <td>23</td>
+                <td>5.500 $</td>
+            </tr>
+            <tr>
+                <td>Mayıs</td>
+                <td>23</td>
+                <td>5.500 $</td>
+            </tr>
+        </table>
+    </div>
+    <!-- table area end -->
+
+    <!-- form area start -->
+    <div class="form-container">
+        <form>
+            <label for="ad">Adınız</label>
+            <input type="text" id="ad" required>
+            <!-- burada for ve id'ye aynı ismi verirsek, sitede "adınız" yazan yere 
+            tıkladığımızda direk kutucuğun içine focus yapıyor, orada imleç çıkıyor -->
+
+            <label for="e-posta">E-Posta</label>
+            <input type="text" id="e-posta" required>
+
+            <label for="mesaj">Mesajınız</label>
+            <textarea name="" id="mesaj" rows="4" required></textarea>
+
+            <input class="buton" type="submit" value="Gönder">
+        </form>
+    </div>
+    <!-- form area end -->
+
+    <!-- footer area -->
+    <div class="foot">
+        <p>All Rights Reserved. Copyright Udemig 2023 &copy </p>
+    </div>
+</body>
+</html>
